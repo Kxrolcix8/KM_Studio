@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM_Studio</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" height="60" alt="Logo" loading="lazy" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Zamów</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tekst tło -->
+    <section class="hero-section">
+        <p class="main-heading">Witaj na stronie <br>KM Studio</p>
+    </section>
+
+    <!-- Formularz zapytania -->
+    <div class="container">
+        <form class="rightSection">
+            <p class="result-message">Formularz kontaktowy</p>
+
+            <input type="text" id="imie" placeholder="Imię" required>
+            <input type="text" id="nazwisko" placeholder="Nazwisko" required>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <div class="checkbox-section">
+                <input type="checkbox" id="zgoda1" name="zgoda1" onclick="calculatePrice()">
+                <label for="zgoda1">Zdjęcie lego</label>
+                
+                <input type="checkbox" id="zgoda2" name="zgoda2" onclick="calculatePrice()">
+                <label for="zgoda2">Zdjęcie malowane</label>
+            </div>
+
+            <!-- Label do wyświetlania ceny -->
+            <label id="price-label" class="price-label">Cena: 0 zł</label>
+
+            <!-- Załącznik -->
+            <div class="attach">
+                <input type="file" id="zalacznik" class="file-input" accept="image/*" style="display: none;">
+                <button type="button" class="attach-button" onclick="document.getElementById('zalacznik').click()">Wybierz plik</button>
+            </div>
+
+            <!-- Wiadomość -->
+            <textarea id="wiadomosc" placeholder="Wiadomość" rows="4" required></textarea>
+
+            <button type="submit" class="btn zapytaj">Zapytaj</button>
+        </form>
+    </div>
+
+    <!-- Stopka -->
+    <div class="container-fluid stopka pt-5">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="index.html">
+                    <img src="logo.png" height="50" alt="Logo" loading="lazy" />
+                </a>
+            </div>
+
+            <span class="stopkaspan text-center col-md-4">© 2024 KM_Studio</span>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-twitter social-icon"></i></a></li>
+                <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-instagram social-icon"></i></a></li>
+                <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-facebook social-icon"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Link do Bootstrap JS i skryptu -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

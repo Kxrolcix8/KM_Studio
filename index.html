@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM_Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img
+                  src="logo.png" 
+                  height="60"
+                  alt="Logo"
+                  loading="lazy"
+                />
+            </a> 
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">O mnie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="order.html">Zamów</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tekst tło -->
+    <section class="hero-section">
+        <p class="main-heading">Witaj na stronie <br>KM Studio</p>
+    </section>
+    
+    <!-- O mnie -->
+    <div id="about" class="container-fluid about d-flex flex-column align-items-center py-4">
+        <!-- Nagłówek "O mnie" -->
+        <div class="row w-100 mb-4">
+            <div class="col-12 my-5 text-center d-flex align-items-center justify-content-center">
+                <i class="fas fa-angle-double-left mx-2"></i>
+                <p class="about-text  mb-0">O mnie</p>
+                <i class="fas fa-angle-double-right mx-2"></i>
+            </div>
+        </div>
+        <!-- Zdjęcie i tekst -->
+        <div class="row about2 d-flex align-items-center justify-content-center w-100">
+            <div class="col-lg-6 col-md-8 col-sm-10 mb-4 text-center text-md-start">
+                <img src="me.JPG" class="img-fluid" height="500" width="400" alt="me" loading="lazy"/>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-10 text-center text-md-start">
+                <p>Cześć! <br> Mam na imie Karolina, mam 23 lata. Jestem absolwentką szkoły średniej o kierunku: 
+                    "Technik poligrafii i cyfrowych procesów graficznych", a także skończyłam licencjat na kierunku 
+                    "Informatyka w biznesie" na Uniwersytecie Szczecińskim.
+                    Grafiką interesuję się już od gimnazjum i robię to hobbystycznie.
+                    Ciągle staram się rozwijać w tym kierunku robiąc coraz to nowe zlecenia projektów graficznych.
+                    Aktualnie mam za sobą kilka poważniejszych projektów takich jak: logo Hotelu, gabinetu Stomatologicznego, a także
+                    biura rachunkowego.
+                    Chętnie podejmę się kolejnego wyzwania!
+                </p>
+            </div>
+        </div>
+    </div>
+
+  <!-- Portfolio -->
+<div id="portfolio" class="container-fluid portfolio d-flex flex-column align-items-center py-4">
+    <div class="row w-100 mb-4">
+        <div class="col-12 my-5 text-center d-flex align-items-center justify-content-center">
+            <i class="fas fa-angle-double-left mx-2"></i>
+            <p class="portfolio-text mb-0">Portfolio</p>
+            <i class="fas fa-angle-double-right mx-2"></i>
+        </div>
+    </div>
+<!-- Portfolio Cards -->
+<div class="container">
+    <!-- 1 row -->
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="prace/baltic.JPG" class="card-img-top" alt="baltic"/>
+                    <div class="card-body">
+                        <h3 class="card-title">Baltic Soul Villa Międzyzdroje</h3>
+                        <p class="card-text">Projekt logo dla villi znajdującej się w Międzyzdrojach.<br><strong>Rok 2022</strong></p>
+                        <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto1">Rozwiń</button>
+                    </div>
+                </div>
+            
+                <!-- The Modal -->
+                <div class="modal fade" id="foto1">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-dark">
+                
+                        <!-- Modal Header -->
+                        <div class="modal-header align-items-center justify-content-center">
+                        <h3 class="modal-title">Baltic Soul Villa</h3>
+                        </div>
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <img src="prace/baltic.JPG" class="card-img-top" alt="baltic"/>
+                            <p class="card-text">Projekt logo dla villi znajdującej się w Międzyzdrojach. Koncepcja połączenia fal morza z morską muszelką.</p>
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn lokalizacja"><span class="material-icons">pin_drop</span></button>
+                            <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+                
+                
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="prace/sigma_logo.jpg" class="card-img-top" alt="sigma"/>
+                    <div class="card-body">
+                        <h3 class="card-title">Sigma - biuro rachunkowe</h3>
+                        <p class="card-text">Projekt logo dla biura rachunkowego znajdującego się w Wałczu.<br><strong>Rok 2024</strong></p>
+                        <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto2">Rozwiń</button>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="foto2">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-dark">
+                
+                        <!-- Modal Header -->
+                        <div class="modal-header align-items-center justify-content-center">
+                        <h3 class="modal-title">Sigma - biuro rachunkowe</h3>
+                        </div>
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <img src="prace/sigma_logo.jpg" class="card-img-top" alt="sigma"/>
+                            <p class="card-text">Projekt logo dla biura rachunkowego znajdującego się w Wałczu. Koncepcja połączenia kalkulatora z dokumentami.</p>
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn lokalizacja"><i class="fa-solid fa-location-dot"></i></button>
+                            <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="prace/sigma.png" class="card-img-top" alt="sigma_wizytowka"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Sigma - biuro rachunkowe</h5>
+                        <p class="card-text">Projekt wizytówek dla biura rachunkowego znajdującego się w Wałczu.<br><strong>Rok 2024</strong></p>
+                        <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto3">Rozwiń</button>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="foto3">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-dark">
+                
+                        <!-- Modal Header -->
+                        <div class="modal-header align-items-center justify-content-center">
+                        <h4 class="modal-title">Sigma - biuro rachunkowe</h4>
+                        </div>
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <img src="prace/sigma2.png" class="card-img-top" alt="sigma_wizytowka"/>
+                            <p class="card-text">Projekt wizytówek w dwóch wersjach kolorystycznych dla biura rachunkowego znajdującego się w Wałczu.</p>
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn lokalizacja"><i class="fa-solid fa-location-dot"></i></button>
+                            <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+
+         </div>       
+    </div>
+    <!-- 2 row -->
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="prace/stomatologia.png" class="card-img-top" alt="stomatologia"/>
+                    <div class="card-body">
+                        <h3 class="card-title">Gabinet stomatolgiczny</h3>
+                        <p class="card-text">Projekt logo wraz z szyldem dla gabinetu Stomatologicznego znajdującego się w Stargardzie <br><strong>Rok 2024</strong></p>
+                        <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto4">Rowiń</button>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="foto4">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-dark">
+                
+                        <!-- Modal Header -->
+                        <div class="modal-header align-items-center justify-content-center">
+                        <h3 class="modal-title">Gabinet stomatologiczny</h3>
+                        </div>
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <img src="prace/stomatologia.png" class="card-img-top" alt="stomatologia"/>
+                            <p class="card-text">Projekt logo wraz z szyldem dla gabinetu Stomatologicznego znajdującego się w Stargardzie. Koncepcja to stworzenie czystego, schludnego logo, trafiającego do każdej grupy wiekowej.</p>
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn lokalizacja"><i class="fa-solid fa-location-dot"></i></button>
+                            <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="prace/net-so.jpg" class="card-img-top" alt="netso"/>
+                    <div class="card-body">
+                        <h3 class="card-title">NetSo Pictures - Firma produkująca video</h3>
+                        <p class="card-text">Projekt logo dla firmy produkcyjnej wysokej jakości nagrania video. <br><strong>Rok 2019</strong></p>
+                        <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto5">Rowiń</button>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="foto5">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-dark">
+                
+                        <!-- Modal Header -->
+                        <div class="modal-header align-items-center justify-content-center">
+                        <h3 class="modal-title">NetSo Pictures - Firma produkująca video</h3>
+                        </div>
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <img src="prace/net-so.jpg" class="card-img-top" alt="netso"/>
+                            <p class="card-text">Projekt logo dla firmy produkcyjnej wysokej jakości nagrania video. Koncepcja to połączenie dwóch członów w elegancji i prosty sposób.</p>
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn lokalizacja"><i class="fa-solid fa-location-dot"></i></button>
+                            <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="prace/miotacze.jpg" class="card-img-top" alt="miotacze"/>
+                    <div class="card-body">
+                        <h3 class="card-title">Logo amatorskiej drużyny koszykarskiej Miotacze Bobrów</h3>
+                        <p class="card-text">Projekt grafiki/logo dla amatorskiej drużyny koszykarskiej. <br><strong>Rok 2022</strong></p>
+                        <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto6">Rowiń</button>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="foto6">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-dark">
+                
+                        <!-- Modal Header -->
+                        <div class="modal-header align-items-center justify-content-center">
+                        <h3 class="modal-title">Logo amatorskiej drużyny koszykarskiej Miotacze Bobrów</h3>
+                        </div>
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <img src="prace/miotacze.jpg" class="card-img-top" alt="miotacze"/>
+                            <p class="card-text">Pierwszy tego typu projekt grafiki/logo dla amatorskiej drużyny koszykarskiej. Koncepcja to wykorzystanie w grafice bobra jako maskotka drużyny.</p>
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn lokalizacja"><i class="fa-solid fa-location-dot"></i></button>
+                            <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+
+         </div> 
+         <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="prace/dywanowy.jpg" class="card-img-top" alt="dywanowy"/>
+                <div class="card-body">
+                    <h3 class="card-title">Dywanowy24.pl - firma produkująca dywany</h3>
+                    <p class="card-text">Projekt logo dla firmy produkującej i sprzedającej dywany. (konkurs) <br><strong>Rok 2019</strong></p>
+                    <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto7">Rowiń</button>
+                </div>
+            </div>
+
+            <!-- The Modal -->
+            <div class="modal fade" id="foto7">
+                <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-dark">
+            
+                    <!-- Modal Header -->
+                    <div class="modal-header align-items-center justify-content-center">
+                    <h3 class="modal-title">Dywanowy24.pl - firma produkująca dywany</h3>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <img src="prace/dywanowy.jpg" class="card-img-top" alt="dywanowy"/>
+                        <p class="card-text">Wyróżniony w konkursie freelance projekt logo dla firmy dywanowy24.pl</p>
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button class="btn lokalizacja"><i class="fa-solid fa-location-dot"></i></button>
+                        <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+                    </div>
+            
+                </div>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+            <img src="prace/nor-bud.jpg" class="card-img-top" alt="nor-bud"/>
+            <div class="card-body">
+                <h3 class="card-title">Nor-Bud - firma budowlana</h3>
+                <p class="card-text">Projekt logo dla firmy budowlanej. (konkurs) <br><strong>Rok 2019</strong></p>
+                <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto8">Rowiń</button>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="foto8">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark">
+        
+                <!-- Modal Header -->
+                <div class="modal-header align-items-center justify-content-center">
+                <h3 class="modal-title">Nor-Bud - firma budowlana</h3>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="prace/nor-bud.jpg" class="card-img-top" alt="nor-bud"/>
+                    <p class="card-text">Wyróżniony w konkursie freelance projekt logo dla firmy Nor-Bud.</p>
+                </div>
+        
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button class="btn lokalizacja"><i class="fa-solid fa-location-dot"></i></button>
+                    <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+                </div>
+        
+            </div>
+            </div>
+        </div>
+
+</div>
+
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card">
+        <img src="prace/sakam.jpg" class="card-img-top" alt="sakam"/>
+        <div class="card-body">
+            <h3 class="card-title">Sakam kominki - firma produkująca kominki</h3>
+            <p class="card-text">Projekt logo dla firmy zajmującej się produkcją i sprzedażą kominków. (konkurs) <br><strong>Rok 2019</strong></p>
+            <button type="button" class="btn portfolio" data-bs-toggle="modal" data-bs-target="#foto9">Rowiń</button>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="foto9">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark">
+    
+            <!-- Modal Header -->
+            <div class="modal-header align-items-center justify-content-center">
+            <h3 class="modal-title">Sakam kominki - firma produkująca kominki</h3>
+            </div>
+    
+            <!-- Modal body -->
+            <div class="modal-body">
+                <img src="prace/sakam.jpg" class="card-img-top" alt="sakam"/>
+                <p class="card-text">Wyróżniony w konkursie freelance projekt logo dla firmy Sakam kominiki.</p>
+            </div>
+    
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button class="btn lokalizacja"><i class="fa-solid fa-location-dot"></i></button>
+                <button type="button" class="btn portfolio" data-bs-dismiss="modal">Zamknij</button>
+            </div>
+    
+        </div>
+        </div>
+    </div>
+
+</div>
+
+
+    </div>
+</div>
+
+
+    <!-- Kontakt -->
+    <div id="contact" class="container-fluid kontakt d-flex flex-column align-items-center py-4">
+        <div class="row w-100 mb-4">
+            <div class="col-12 my-5 text-center d-flex align-items-center justify-content-center">
+                <i class="fas fa-angle-double-left mx-2"></i>
+                <p class="kontakt-text mb-0">Kontakt</p>
+                <i class="fas fa-angle-double-right mx-2"></i>
+            </div>
+        </div>
+
+        <!-- Formularz Kontaktowy -->
+        <div class="container contact py-5">
+            <h2 class="text-center mb-4 text-white">Skontaktuj się ze mną!</h2>
+            <form class="row g-3 align-items-center justify-content-center">
+                <div class="col-md-5">
+                    <label for="inputName" class="form-label">Twoje Imię</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Wpisz swoje imię">
+                </div>
+                <div class="col-md-5">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Wpisz swój adres email">
+                </div>
+                <div class="col-md-5">
+                    <label for="inputService" class="form-label">Usługi</label>
+                    <select id="inputService" class="form-select">
+                        <option selected>Wybierz usługę</option>
+                        <option value="1">Projekt logo</option>
+                        <option value="2">Projekt wizytówki/plakatu/ulotki</option>
+                        <option value="3">Grafika na strone</option>
+                        <option value="3">Inne</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label for="inputBudget" class="form-label">Budżet</label>
+                    <select id="inputBudget" class="form-select">
+                        <option selected>Wybierz budżet</option>
+                        <option value="1">500 PLN</option>
+                        <option value="2">1000 PLN</option>
+                        <option value="3">2000 PLN</option>
+                        <option value="4">3000 PLN</option>
+                        <option value="5">Bez limitu</option>
+                    </select>
+                </div>
+                <div class="col-md-10">
+                    <label for="inputMessage" class="form-label">Wiadomość</label>
+                    <textarea class="form-control" id="inputMessage" rows="3" placeholder="Wpisz swoją wiadomość"></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn portfolio">Wyślij</button>
+                </div>
+            </form>
+        </div>     
+    </div>
+
+<!-- Stopka -->
+<div class="container-fluid stopka pt-5">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="index.html">
+                <img
+                    src="logo.png"
+                    height="50"
+                    alt="Logo"
+                    loading="lazy"
+                />
+            </a>
+        </div>
+
+        <span class="stopkaspan text-center col-md-4">© 2024 KM_Studio</span>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-twitter social-icon"></i></a></li>
+            <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-instagram social-icon"></i></a></li>
+            <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-facebook  social-icon"></i></a></li>
+        </ul>
+        
+    </footer>
+</div>
+
+
+
+    <!-- Link do Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

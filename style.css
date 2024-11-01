@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  background: url('tlo.jpg') no-repeat center center fixed; /* Ustawienie tła na całe body */
+  background-size: cover;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* navbar */
+.navbar {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  background-color: transparent !important; /* Zapewnia przezroczystość */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; 
+  padding: 1rem; 
+  border: none;
+  box-shadow: none;
+}
+
+
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie poziome */
+  align-items: center; /* Wyśrodkowanie pionowe */
+  height: 100vh; /* Pełna wysokość widoku */
+  text-align: center;
+}
+
+/* Main Heading */
+.main-heading {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.8); /* Lekko przezroczysty biały */
+  margin: 0;
+  animation: text-pop-up-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@keyframes text-pop-up-top {
+  0% {
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(-50px);
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+*/* button */
+.nav-link {
+  transition: all .5s ease;
+  color: white !important; 
+  outline: none;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(112, 68, 138, 0.7); 
+}
+
+
+.navbar-brand img {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); 
+}
+
+
+/* Stylizacja sekcji "O mnie" */
+.about {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  background: black;
+  padding: 2rem 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem; 
+  color: white;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  background: black;
+  padding: 2rem 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem; 
+  color: white;
+}
+
+.kontakt {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  background: black;
+  padding: 2rem 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem; 
+  color: white;
+}
+
+
+.contact {
+  background: rgba(112, 68, 138, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #333;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control,
+.form-select {
+  border-radius: 5px;
+}
+.stopka .stopkaspan {
+  text-align: center;
+}
+
+.social-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.about2 img {
+  margin: 0 auto; 
+  display: block;
+}
+
+.btn.portfolio{
+  color: #ffffff;
+  background-color: rgba(112, 68, 138, 0.7); 
+
+}
+.btn.portfolio:hover {
+  color: #ffffff;
+  background-color: rgba(42, 19, 54, 0.7); 
+}
+
+.card-text{
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+

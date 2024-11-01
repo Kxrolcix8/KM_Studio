@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: url('tlo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* navbar */
+.navbar {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  background-color: transparent !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar .nav-link {
+  transition: all .5s ease;
+  color: white !important;
+  outline: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem; 
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(71, 32, 94, 0.7);
+}
+
+.navbar-brand img {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+/* Sekcja formularza */
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 1em 2em; 
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 10px;
+  border: 20px solid #8d1ca4;
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+/* Nagłówek formularza */
+p {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 2.5rem; 
+  color: white;
+}
+
+/* Styl inputów i tekstów */
+input, textarea {
+  border: 10px outset #6e1ca4;
+  border-radius: 0px 0px 40px 0px;
+  font-size: 2rem; 
+  margin: 1em 0; 
+  padding: .5em;
+}
+
+input:focus, textarea:focus {
+  border: 10px outset #791ca4;
+  border-radius: 40px 0px 40px 0px;
+  outline: none;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+  color: #742baf;
+}
+
+/* Styl dla label */
+label {
+  font-size: 1rem; 
+  color: white;
+  display: inline-block;
+  
+}
+
+/* Checkbox section */
+.checkbox-section {
+  display: flex;
+  gap: 4em; 
+  margin: 1em 0; 
+  color: white;
+}
+
+
+/* MEDIA QUERIES --------------------- */
+
+@media only screen and (max-width: 1200px) {
+  input, textarea {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .bigGreyCircle {
+    display: none;
+  }
+  .rightSection {
+    width: 70%;
+    margin: 3em auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .smallRedCircle {
+    height: 60%;
+  }
+  .rightSection {
+    padding: 2em 5em;
+  }
+  input, textarea {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .rightSection {
+    width: 85%;
+  }
+  button {
+    margin: .5em auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .rightSection {
+    padding: 1em 2.5em;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .rightSection {
+    padding: 1em 1.8em;
+  }
+  button {
+    width: 7em;
+  }
+}
+
+/* Styl dla formularza w odcieniach fioletu */
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 5em 7em;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 10px;
+  border: 10px solid #7b1fa2;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.price-label {
+  width: 100%;
+  border: 10px outset #791ca4;
+  border-radius: 40px 0px 40px 0px;
+  outline: none;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  margin-bottom: 1em;
+  background-color: #ffffff;
+  color: #4a0072;
+  transition: all 0.3s ease;
+}
+
+
+.attach {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+
+.attach-button {
+  width: 100%;
+  border: 10px outset #791ca4;
+  border-radius: 40px 0px 40px 0px;
+  outline: none;
+  font-size: 0.7rem;
+  padding: 0.5em;
+  background-color: #ffffff;
+  color: #4a0072;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.attach-button:hover {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.zapytaj {
+  font-size: 2rem;
+  color: #2f0144 !important; 
+  background-color: #ffffff !important; 
+  border: 10px outset #6e1ca4;
+  border-radius: 0px 0px 40px 0px;
+  padding: 0.5em;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  box-shadow: 0px 4px 10px rgba(110, 28, 164, 0.4); 
+}
+
+.zapytaj:hover {
+  background-color: #c199dd; 
+  color: #2f0144 !important; 
+  box-shadow: 0px 6px 20px rgba(110, 28, 164, 0.6); 
+}
+
+.zapytaj:focus {
+  border: 10px solid #791ca4;
+  outline: none;
+  box-shadow: 0px 6px 15px rgba(121, 28, 164, 0.6); 
+}
+
+
