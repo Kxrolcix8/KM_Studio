@@ -34,39 +34,59 @@
 
     <!-- Tekst tło -->
     <section class="hero-section">
-        <p class="main-heading">Witaj na stronie <br>KM Studio</p>
+        <p class="main-heading text-center">Witaj na stronie <br>KM Studio</p>
     </section>
 
     <!-- Formularz zapytania -->
-    <div class="container">
+    <div class="container my-4">
         <form class="rightSection">
-            <p class="result-message">Formularz kontaktowy</p>
+            <p class="result-message text-center">Formularz kontaktowy</p>
 
-            <input type="text" id="imie" placeholder="Imię" required>
-            <input type="text" id="nazwisko" placeholder="Nazwisko" required>
-            <input type="email" id="email" placeholder="Email" required>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <input type="text" id="imie" class="form-control" placeholder="Imię" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="nazwisko" class="form-control" placeholder="Nazwisko" required>
+                </div>
+            </div>
 
-            <div class="checkbox-section">
-                <input type="checkbox" id="zgoda1" name="zgoda1" onclick="calculatePrice()">
-                <label for="zgoda1">Zdjęcie lego</label>
-                
-                <input type="checkbox" id="zgoda2" name="zgoda2" onclick="calculatePrice()">
-                <label for="zgoda2">Zdjęcie malowane</label>
+            <div class="mb-3">
+                <input type="email" id="email" class="form-control" placeholder="Email" required>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" id="zgoda1" name="zgoda1" class="form-check-input" onclick="calculatePrice()">
+                    <label for="zgoda1" class="form-check-label">Zdjęcie LEGO</label>
+                </div>
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" id="zgoda2" name="zgoda2" class="form-check-input" onclick="calculatePrice()">
+                    <label for="zgoda2" class="form-check-label">Zdjęcie malowane</label>
+                </div>
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" id="zgoda3" name="zgoda2" class="form-check-input" onclick="calculatePrice()">
+                    <label for="zgoda3" class="form-check-label">Zdjęcie szkic</label>
+                </div>
             </div>
 
             <!-- Label do wyświetlania ceny -->
-            <label id="price-label" class="price-label">Cena: 0 zł</label>
+            <label id="price-label" class="price-label d-block text-center mb-3">Cena: 0 zł</label>
 
             <!-- Załącznik -->
-            <div class="attach">
-                <input type="file" id="zalacznik" class="file-input" accept="image/*" style="display: none;">
-                <button type="button" class="attach-button" onclick="document.getElementById('zalacznik').click()">Wybierz plik</button>
+            <div class="mb-3 text-center">
+                <input type="file" id="zalacznik" class="file-input d-none" accept="image/*">
+                <button type="button" class="btn send" onclick="document.getElementById('zalacznik').click()">Wybierz plik</button>
             </div>
 
             <!-- Wiadomość -->
-            <textarea id="wiadomosc" placeholder="Wiadomość" rows="4" required></textarea>
+            <div class="mb-3">
+                <textarea id="wiadomosc" class="form-control" placeholder="Wiadomość" rows="4" required></textarea>
+            </div>
 
-            <button type="submit" class="btn zapytaj">Zapytaj</button>
+            <div class="text-center">
+                <button type="submit" class="btn zapytaj">Zapytaj</button>
+            </div>
         </form>
     </div>
 
