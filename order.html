@@ -108,49 +108,67 @@
     <!-- Skrypt Firebase i formularza -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-      import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
 
-      const firebaseConfig = {
-          apiKey: "AIzaSyA4Hl17_gAzEdbSv4T2YuvW3j0qbcKDQC4",
-          authDomain: "kmstudio-47b98.firebaseapp.com",
-          projectId: "kmstudio-47b98",
-          storageBucket: "kmstudio-47b98.appspot.com",
-          messagingSenderId: "269416865716",
-          appId: "1:269416865716:web:bca64d2f1be7c8346a1ce1"
-      };
+const firebaseConfig = {
+    apiKey: "AIzaSyA4Hl17_gAzEdbSv4T2YuvW3j0qbcKDQC4",
+    authDomain: "kmstudio-47b98.firebaseapp.com",
+    projectId: "kmstudio-47b98",
+    storageBucket: "kmstudio-47b98.appspot.com",
+    messagingSenderId: "269416865716",
+    appId: "1:269416865716:web:bca64d2f1be7c8346a1ce1"
+};
 
-      const app = initializeApp(firebaseConfig);
-      const db = getFirestore(app);
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const storage = getStorage(app); // Inicjalizacja Storage
 
-      document.querySelector('.rightSection').addEventListener('submit', async (event) => {
-          event.preventDefault();
-          const imie = document.getElementById('imie').value;
-          const nazwisko = document.getElementById('nazwisko').value;
-          const email = document.getElementById('email').value;
-          const zgoda1 = document.getElementById('zgoda1').checked;
-          const zgoda2 = document.getElementById('zgoda2').checked;
-          const zgoda3 = document.getElementById('zgoda3').checked;
-          const wiadomosc = document.getElementById('wiadomosc').value;
+document.querySelector('.rightSection').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    
+    const imie = document.getElementById('imie').value;
+    const nazwisko = document.getElementById('nazwisko').value;
+    const email = document.getElementById('email').value;
+    const zgoda1 = document.getElementById('zgoda1').checked;
+    const zgoda2 = document.getElementById('zgoda2').checked;
+    const zgoda3 = document.getElementById('zgoda3').checked;
+    const wiadomosc = document.getElementById('wiadomosc').value;
+    const fileInput = document.getElementById('zalacznik');
+    
+    try {
+        // Sprawdź, czy wybrano plik
+        let fileUrl = null;
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            const storageRef = ref(storage, `uploads/${file.name}`); // Referencja do pliku w Storage
+            await uploadBytes(storageRef, file); // Przesyłanie pliku
+            fileUrl = storageRef.fullPath; // Zapisz ścieżkę do pliku (możesz też zapisać URL)
+        }
 
-          try {
-              await addDoc(collection(db, 'zapytania'), {
-                  imie: imie,
-                  nazwisko: nazwisko,
-                  email: email,
-                  zgoda1: zgoda1,
-                  zgoda2: zgoda2,
-                  zgoda3: zgoda3,
-                  wiadomosc: wiadomosc,
-                  timestamp: serverTimestamp()
-              });
-              alert('Dziękujemy! Twoje zapytanie zostało wysłane.');
-              document.querySelector('.rightSection').reset();
-          } catch (error) {
-              console.error('Błąd przy zapisie danych:', error);
-              alert('Wystąpił błąd. Spróbuj ponownie później.');
-          }
-      });
+        // Zapis danych do Firestore
+        await addDoc(collection(db, 'zapytania'), {
+            imie: imie,
+            nazwisko: nazwisko,
+            email: email,
+            zgoda1: zgoda1,
+            zgoda2: zgoda2,
+            zgoda3: zgoda3,
+            wiadomosc: wiadomosc,
+            plikUrl: fileUrl, // Możesz również zapisać URL pliku w Firestore
+            timestamp: serverTimestamp()
+        });
+
+        alert('Dziękujemy! Twoje zapytanie zostało wysłane.');
+        document.querySelector('.rightSection').reset();
+    } catch (error) {
+        console.error('Błąd przy zapisie danych:', error);
+        alert('Wystąpił błąd. Spróbuj ponownie później.');
+    }
+});
+
     </script>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
